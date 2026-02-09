@@ -1,4 +1,4 @@
-export default {
+const prettierConfig = {
 	/**
 	 * Рекомендуемая длина строки
 	 * @type number
@@ -11,7 +11,7 @@ export default {
 	 * @type number
 	 * @default 2
 	 */
-	tabWidth: 3,
+	tabWidth: 2,
 
 	/**
 	 * Использовать табы вместо пробелов
@@ -134,3 +134,5 @@ export default {
 
 	plugins: ['prettier-plugin-tailwindcss'],
 };
+
+export default prettierConfig;

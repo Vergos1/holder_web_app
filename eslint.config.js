@@ -30,6 +30,7 @@ const eslintConfig = [
 			'@typescript-eslint/no-unused-vars': 'off',
 			'simple-import-sort/imports': 'error',
 			'simple-import-sort/exports': 'error',
+			'@next/next/no-img-element': 'off',
 		},
 	},
 ];
