@@ -1,9 +1,8 @@
 'use client';
 
+import { cn } from '@shared-lib/tw-merge';
 import { AlertDialog as AlertDialogPrimitive } from 'radix-ui';
 import * as React from 'react';
-
-import { cn } from '@shared-lib/tw-merge';
 
 import { Button } from './button';
 

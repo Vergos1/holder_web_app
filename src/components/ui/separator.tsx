@@ -1,9 +1,8 @@
 'use client';
 
+import { cn } from '@shared-lib/tw-merge';
 import { Separator as SeparatorPrimitive } from 'radix-ui';
 import * as React from 'react';
-
-import { cn } from '@shared-lib/tw-merge';
 
 function Separator({
 	className,

@@ -1,10 +1,9 @@
 'use client';
 
 import { Combobox as ComboboxPrimitive } from '@base-ui/react';
+import { cn } from '@shared-lib/tw-merge';
 import { CheckIcon, ChevronDownIcon, XIcon } from 'lucide-react';
 import * as React from 'react';
-
-import { cn } from '@shared-lib/tw-merge';
 
 import { Button } from './button';
 import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from './input-group';

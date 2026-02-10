@@ -1,9 +1,8 @@
 'use client';
 
+import { cn } from '@shared-lib/tw-merge';
 import { cva, type VariantProps } from 'class-variance-authority';
 import * as React from 'react';
-
-import { cn } from '@shared-lib/tw-merge';
 
 import { Button } from './button';
 import { Input } from './input';
