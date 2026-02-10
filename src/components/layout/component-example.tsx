@@ -32,8 +32,9 @@ import {
 } from 'lucide-react';
 import * as React from 'react';
 
-import { Example, ExampleWrapper } from './example';
 import {
+	Badge,
+	Button,
 	AlertDialog,
 	AlertDialogAction,
 	AlertDialogCancel,
@@ -44,27 +45,12 @@ import {
 	AlertDialogMedia,
 	AlertDialogTitle,
 	AlertDialogTrigger,
-} from './ui/alert-dialog';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import {
-	Card,
-	CardAction,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from './ui/card';
-import {
 	Combobox,
 	ComboboxContent,
 	ComboboxEmpty,
 	ComboboxInput,
 	ComboboxItem,
 	ComboboxList,
-} from './ui/combobox';
-import {
 	DropdownMenu,
 	DropdownMenuCheckboxItem,
 	DropdownMenuContent,
@@ -80,18 +66,26 @@ import {
 	DropdownMenuSubContent,
 	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
-} from './ui/dropdown-menu';
-import { Field, FieldGroup, FieldLabel } from './ui/field';
-import { Input } from './ui/input';
-import {
+	Field,
+	FieldGroup,
+	FieldLabel,
 	Select,
 	SelectContent,
 	SelectGroup,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from './ui/select';
-import { Textarea } from './ui/textarea';
+	Input,
+	Textarea,
+	CardHeader,
+	Card,
+	CardTitle,
+	CardDescription,
+	CardFooter,
+	CardAction,
+	CardContent,
+} from '@components-ui';
+import { Example, ExampleWrapper } from '@components-layout';
 
 export function ComponentExample() {
 	return (
@@ -116,8 +110,8 @@ function CardExample() {
 				<CardHeader>
 					<CardTitle>Observability Plus is replacing Monitoring</CardTitle>
 					<CardDescription>
-						Switch to the improved way to explore your data, with natural language. Monitoring
-						will no longer be available on the Pro plan in November, 2025
+						Switch to the improved way to explore your data, with natural language. Monitoring will
+						no longer be available on the Pro plan in November, 2025
 					</CardDescription>
 				</CardHeader>
 				<CardFooter>
@@ -288,10 +282,7 @@ function FormExample() {
 											<DropdownMenuSubContent>
 												<DropdownMenuGroup>
 													<DropdownMenuLabel>Appearance</DropdownMenuLabel>
-													<DropdownMenuRadioGroup
-														value={theme}
-														onValueChange={setTheme}
-													>
+													<DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
 														<DropdownMenuRadioItem value="light">
 															<SunIcon />
 															Light
@@ -347,9 +338,7 @@ function FormExample() {
 														<DropdownMenuPortal>
 															<DropdownMenuSubContent>
 																<DropdownMenuGroup>
-																	<DropdownMenuLabel>
-																		Notification Types
-																	</DropdownMenuLabel>
+																	<DropdownMenuLabel>Notification Types</DropdownMenuLabel>
 																	<DropdownMenuCheckboxItem
 																		checked={notifications.push}
 																		onCheckedChange={checked =>
@@ -460,10 +449,7 @@ function FormExample() {
 							</Field>
 							<Field>
 								<FieldLabel htmlFor="small-form-comments">Comments</FieldLabel>
-								<Textarea
-									id="small-form-comments"
-									placeholder="Add any additional comments"
-								/>
+								<Textarea id="small-form-comments" placeholder="Add any additional comments" />
 							</Field>
 							<Field orientation="horizontal">
 								<Button type="submit">Submit</Button>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { cn } from '@/src/lib/utils';
+import { cn } from '@shared-lib/tw-merge';
 
 function Card({
 	className,
@@ -82,4 +82,4 @@ function CardFooter({ className, ...props }: React.ComponentProps<'div'>) {
 	);
 }
 
-export { Card, CardAction, CardContent,CardDescription, CardFooter, CardHeader, CardTitle };
+export { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle };

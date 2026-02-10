@@ -1,4 +1,4 @@
-import './globals.css';
+import '@styles/globals.css';
 
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
@@ -27,9 +27,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className={inter.variable}>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				{children}
-			</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
 		</html>
 	);
 }

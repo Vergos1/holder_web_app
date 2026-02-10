@@ -1,4 +1,4 @@
-import { cn } from '@/src/lib/utils';
+import { cn } from '@shared-lib/tw-merge';
 
 function ExampleWrapper({ className, ...props }: React.ComponentProps<'div'>) {
 	return (
@@ -50,4 +50,4 @@ function Example({
 	);
 }
 
-export { Example,ExampleWrapper };
+export { Example, ExampleWrapper };
