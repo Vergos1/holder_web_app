@@ -27,16 +27,29 @@
 			"@components/*": ["components/*"],
 			"@components-ui": ["components/ui/index.ts"],
 			"@components-ui/*": ["components/ui/*"],
-			"@components-layout/*": ["components/layout/*"],
 			"@components-layout": ["components/layout/index.ts"],
+			"@components-layout/*": ["components/layout/*"],
 
 			"@shared/*": ["shared/*"],
+
 			"@shared-api/*": ["shared/api/*"],
+
+			"@shared-lib": ["shared/lib/index.ts"],
 			"@shared-lib/*": ["shared/lib/*"],
+
+			"@shared-utils": ["shared/utils/index.ts"],
 			"@shared-utils/*": ["shared/utils/*"],
+
+			"@shared-hooks": ["shared/hooks/index.ts"],
 			"@shared-hooks/*": ["shared/hooks/*"],
+
+			"@shared-store": ["shared/store/index.ts"],
 			"@shared-store/*": ["shared/store/*"],
+
+			"@shared-config": ["shared/config/index.ts"],
 			"@shared-config/*": ["shared/config/*"],
+
+			"@shared-types": ["shared/types/index.ts"],
 			"@shared-types/*": ["shared/types/*"],
 
 			"@styles/*": ["styles/*"]
