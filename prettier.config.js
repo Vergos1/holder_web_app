@@ -4,7 +4,7 @@ const prettierConfig = {
 	 * @type number
 	 * @default 80
 	 */
-	printWidth: 100,
+	printWidth: 80,
 
 	/**
 	 * Размер табуляции (в пробелах)
