@@ -18,7 +18,7 @@ const prettierConfig = {
 	 * @type boolean
 	 * @default false
 	 */
-	useTabs: true,
+	useTabs: false,
 
 	/**
 	 * Добавлять автоматически точки с запятой
