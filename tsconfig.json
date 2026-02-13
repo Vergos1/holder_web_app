@@ -1,67 +1,69 @@
 {
-	"compilerOptions": {
-		"target": "ES2017",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "react-jsx",
-		"incremental": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"baseUrl": "src",
-		"paths": {
-			"@/*": ["*"],
-			"@app/*": ["app/*"],
-			"@features/*": ["features/*"],
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@app/*": ["app/*"],
 
-			"@components/*": ["components/*"],
-			"@components-ui": ["components/ui/index.ts"],
-			"@components-ui/*": ["components/ui/*"],
-			"@components-layout": ["components/layout/index.ts"],
-			"@components-layout/*": ["components/layout/*"],
+      "@features": ["features/index.ts"],
+      "@features/*": ["features/*"],
 
-			"@shared/*": ["shared/*"],
+      "@components/*": ["components/*"],
+      "@components-ui": ["components/ui/index.ts"],
+      "@components-ui/*": ["components/ui/*"],
+      "@components-layout": ["components/layout/index.ts"],
+      "@components-layout/*": ["components/layout/*"],
 
-			"@shared-api/*": ["shared/api/*"],
+      "@shared/*": ["shared/*"],
 
-			"@shared-lib": ["shared/lib/index.ts"],
-			"@shared-lib/*": ["shared/lib/*"],
+      "@shared-api/*": ["shared/api/*"],
 
-			"@shared-utils": ["shared/utils/index.ts"],
-			"@shared-utils/*": ["shared/utils/*"],
+      "@shared-lib": ["shared/lib/index.ts"],
+      "@shared-lib/*": ["shared/lib/*"],
 
-			"@shared-hooks": ["shared/hooks/index.ts"],
-			"@shared-hooks/*": ["shared/hooks/*"],
+      "@shared-utils": ["shared/utils/index.ts"],
+      "@shared-utils/*": ["shared/utils/*"],
 
-			"@shared-store": ["shared/store/index.ts"],
-			"@shared-store/*": ["shared/store/*"],
+      "@shared-hooks": ["shared/hooks/index.ts"],
+      "@shared-hooks/*": ["shared/hooks/*"],
 
-			"@shared-config": ["shared/config/index.ts"],
-			"@shared-config/*": ["shared/config/*"],
+      "@shared-store": ["shared/store/index.ts"],
+      "@shared-store/*": ["shared/store/*"],
 
-			"@shared-types": ["shared/types/index.ts"],
-			"@shared-types/*": ["shared/types/*"],
+      "@shared-config": ["shared/config/index.ts"],
+      "@shared-config/*": ["shared/config/*"],
 
-			"@styles/*": ["styles/*"]
-		}
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		".next/types/**/*.ts",
-		".next/dev/types/**/*.ts",
-		"**/*.mts"
-	],
-	"exclude": ["node_modules"]
+      "@shared-types": ["shared/types/index.ts"],
+      "@shared-types/*": ["shared/types/*"],
+
+      "@styles/*": ["styles/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
 }
