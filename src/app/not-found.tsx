@@ -1,6 +1,6 @@
 'use client';
 
-import { NotFoundView } from '@features';
+import { NotFoundView } from './_components';
 
 export default function NotFound() {
   return <NotFoundView />;
