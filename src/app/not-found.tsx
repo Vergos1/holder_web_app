@@ -40,15 +40,14 @@ export default function NotFoundPage() {
             404
           </TypographyLarge>
           <TypographyMuted className="max-w-sm text-base">
-            The page you&apos;re looking for doesn&apos;t exist. Try searching
-            for what you need below.
+            Сторінку не знайдено. Використайте пошук або поверніться на головну.
           </TypographyMuted>
         </div>
 
         <Combobox autoHighlight items={routes} onValueChange={handleRedirect}>
           <ComboboxInput
             className="h-10 w-full"
-            placeholder="Try searching for pages..."
+            placeholder="Пошук сторінок…"
             showTrigger={false}
           >
             <InputGroupAddon>
@@ -59,7 +58,7 @@ export default function NotFoundPage() {
             </InputGroupAddon>
           </ComboboxInput>
           <ComboboxContent alignOffset={-30} sideOffset={10} className="w-96">
-            <ComboboxEmpty>No results found.</ComboboxEmpty>
+            <ComboboxEmpty>Нічого не знайдено.</ComboboxEmpty>
             <ComboboxList>
               {item => (
                 <ComboboxItem key={item.path} value={item}>
@@ -68,9 +67,6 @@ export default function NotFoundPage() {
                       <ItemTitle className="whitespace-nowrap">
                         {item.label}
                       </ItemTitle>
-                      <ItemDescription className="text-xs text-gray-500">
-                        {item.path}
-                      </ItemDescription>
                     </ItemContent>
                   </Item>
                 </ComboboxItem>

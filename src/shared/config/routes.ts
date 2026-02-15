@@ -6,15 +6,15 @@ type RouteConfig = {
 export const ROUTES = {
   home: {
     path: '/',
-    label: 'Home',
+    label: 'Головна',
   },
 
   login: {
     path: '/login',
-    label: 'Login',
+    label: 'Вхід',
   },
   signup: {
     path: '/signup',
-    label: 'Sign up',
+    label: 'Реєстрація',
   },
 } satisfies Record<string, RouteConfig>;
