@@ -1,53 +1,86 @@
-type List = {
-  id: string | number;
-  text: string;
-};
+import { cn } from '@shared-lib';
 
-function TypographyH1({ children }: Readonly<{ children: string }>) {
+type TypographyListProps = Readonly<{
+  list: { id: string | number; text: string }[];
+  className?: string;
+}>;
+
+type TypographyTextProps = Readonly<{
+  children: string;
+  className?: string;
+}>;
+
+function TypographyH1({ children, className }: TypographyTextProps) {
   return (
-    <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+    <h1
+      className={cn(
+        'scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance',
+        className,
+      )}
+    >
       {children}
     </h1>
   );
 }
 
-function TypographyH2({ children }: Readonly<{ children: string }>) {
+function TypographyH2({ children, className }: TypographyTextProps) {
   return (
-    <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+    <h2
+      className={cn(
+        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
+        className,
+      )}
+    >
       {children}
     </h2>
   );
 }
 
-function TypographyH3({ children }: Readonly<{ children: string }>) {
+function TypographyH3({ children, className }: TypographyTextProps) {
   return (
-    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+    <h3
+      className={cn(
+        'scroll-m-20 text-2xl font-semibold tracking-tight',
+        className,
+      )}
+    >
       {children}
     </h3>
   );
 }
 
-function TypographyH4({ children }: Readonly<{ children: string }>) {
+function TypographyH4({ children, className }: TypographyTextProps) {
   return (
-    <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+    <h4
+      className={cn(
+        'scroll-m-20 text-xl font-semibold tracking-tight',
+        className,
+      )}
+    >
       {children}
     </h4>
   );
 }
 
-function TypographyP({ children }: Readonly<{ children: string }>) {
-  return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
-}
-
-function TypographyBlockquote({ children }: Readonly<{ children: string }>) {
+function TypographyP({ children, className }: TypographyTextProps) {
   return (
-    <blockquote className="mt-6 border-l-2 pl-6 italic">{children}</blockquote>
+    <p className={cn('leading-7 [&:not(:first-child)]:mt-6', className)}>
+      {children}
+    </p>
   );
 }
 
-function TypographyList({ list }: Readonly<{ list: List[] }>) {
+function TypographyBlockquote({ children, className }: TypographyTextProps) {
   return (
-    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+    <blockquote className={cn('mt-6 border-l-2 pl-6 italic', className)}>
+      {children}
+    </blockquote>
+  );
+}
+
+function TypographyList({ list, className }: TypographyListProps) {
+  return (
+    <ul className={cn('my-6 ml-6 list-disc [&>li]:mt-2', className)}>
       {list.map(({ text, id }) => (
         <li key={id}>{text}</li>
       ))}
@@ -55,28 +88,43 @@ function TypographyList({ list }: Readonly<{ list: List[] }>) {
   );
 }
 
-function TypographyInlineCode({ children }: Readonly<{ children: string }>) {
+function TypographyInlineCode({ children, className }: TypographyTextProps) {
   return (
-    <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+    <code
+      className={cn(
+        'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
+        className,
+      )}
+    >
       {children}
     </code>
   );
 }
 
-function TypographyLead({ children }: Readonly<{ children: string }>) {
-  return <p className="text-muted-foreground text-xl">{children}</p>;
+function TypographyLead({ children, className }: TypographyTextProps) {
+  return (
+    <p className={cn('text-muted-foreground text-xl', className)}>{children}</p>
+  );
 }
 
-function TypographyLarge({ children }: Readonly<{ children: string }>) {
-  return <div className="text-lg font-semibold">{children}</div>;
+function TypographyLarge({ children, className }: TypographyTextProps) {
+  return (
+    <div className={cn('text-lg font-semibold', className)}>{children}</div>
+  );
 }
 
-function TypographySmall({ children }: Readonly<{ children: string }>) {
-  return <small className="text-sm leading-none font-medium">{children}</small>;
+function TypographySmall({ children, className }: TypographyTextProps) {
+  return (
+    <small className={cn('text-sm leading-none font-medium', className)}>
+      {children}
+    </small>
+  );
 }
 
-function TypographyMuted({ children }: Readonly<{ children: string }>) {
-  return <p className="text-muted-foreground text-sm">{children}</p>;
+function TypographyMuted({ children, className }: TypographyTextProps) {
+  return (
+    <p className={cn('text-muted-foreground text-sm', className)}>{children}</p>
+  );
 }
 
 export {
