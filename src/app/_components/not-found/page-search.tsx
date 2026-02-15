@@ -23,6 +23,7 @@ export const PageSearch = () => {
   return (
     <Combobox autoHighlight items={routes} onValueChange={handleRedirect}>
       <ComboboxInput
+        className="h-12 w-full"
         placeholder="Try searching for pages..."
         showTrigger={false}
       >
@@ -33,7 +34,7 @@ export const PageSearch = () => {
           <Kbd>/</Kbd>
         </InputGroupAddon>
       </ComboboxInput>
-      <ComboboxContent alignOffset={-28} className="w-60">
+      <ComboboxContent alignOffset={-30} sideOffset={15} className="w-96">
         <ComboboxEmpty>No results found.</ComboboxEmpty>
         <ComboboxList>
           {item => (
