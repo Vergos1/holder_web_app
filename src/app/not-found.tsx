@@ -20,6 +20,8 @@ import { ROUTES } from '@shared-config';
 import { SearchIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
+import { SupportLink } from './_components';
+
 type RouteItem = { path: string; label: string };
 
 export default function NotFoundPage() {
@@ -77,12 +79,7 @@ export default function NotFoundPage() {
           </ComboboxContent>
         </Combobox>
 
-        <TypographyMuted className="text-sm">
-          Need help?{' '}
-          <a href="#" className="underline">
-            Contact support
-          </a>
-        </TypographyMuted>
+        <SupportLink />
       </div>
     </div>
   );

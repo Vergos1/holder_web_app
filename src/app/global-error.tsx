@@ -2,11 +2,13 @@
 
 import '@styles/globals.css';
 
-import { Button } from '@components-ui';
+import { Button, TypographyLarge, TypographyMuted } from '@components-ui';
 import { ROUTES } from '@shared-config';
 import { getPath } from '@shared-utils';
 import Link from 'next/link';
 import { useEffect } from 'react';
+
+import { SupportLink } from './_components';
 
 type GlobalErrorProps = Readonly<{
   error: Error & { digest?: string };
@@ -21,29 +23,28 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
   return (
     <html>
       <body>
-        <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col items-center justify-center px-4 py-8 text-center">
-            <h2 className="mb-6 text-5xl font-semibold">Whoops!</h2>
-            <h3 className="mb-1.5 text-3xl font-semibold">
-              Something went wrong
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-sm">
-              The page you&apos;re looking for isn&apos;t found, we suggest you
-              back to home.
-            </p>
-            <Button asChild size="lg" className="rounded-lg text-base">
-              <Link href={getPath(ROUTES.home)}>Back to home page</Link>
-            </Button>
-          </div>
+        <div className="flex h-full items-center justify-center">
+          <div className="grid max-w-md gap-4 text-center">
+            <div className="flex flex-col items-center gap-2">
+              <TypographyLarge className="text-4xl font-extrabold">
+                Сталася помилка. <br /> Не хвилюйтесь — ми вже працюємо над
+                виправленням.
+              </TypographyLarge>
 
-          {/* Right Section: Illustration */}
-          <div className="relative max-h-screen w-full p-2 max-lg:hidden">
-            <div className="h-full w-full rounded-2xl bg-black"></div>
-            <img
-              src="https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/error/image-1.png"
-              alt="404 illustration"
-              className="absolute top-1/2 left-1/2 h-[clamp(260px,25vw,406px)] -translate-x-1/2 -translate-y-1/2"
-            />
+              <TypographyMuted className="max-w-sm text-base">
+                Спробуйте перезавантажити сторінку або повернутися на головну.
+              </TypographyMuted>
+            </div>
+            <div className="flex justify-center gap-4">
+              <Button asChild>
+                <Link href={getPath(ROUTES.home)}>На головну</Link>
+              </Button>
+              <Button variant="outline" onClick={reset}>
+                Перезавантажити
+              </Button>
+            </div>
+
+            <SupportLink />
           </div>
         </div>
       </body>
