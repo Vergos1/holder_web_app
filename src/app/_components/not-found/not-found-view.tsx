@@ -11,6 +11,8 @@ import {
 } from '@components-ui';
 import { SearchIcon } from 'lucide-react';
 
+import { PageSearch } from './page-search';
+
 export const NotFoundView = () => {
   return (
     <Empty>
@@ -22,15 +24,7 @@ export const NotFoundView = () => {
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
-        <InputGroup className="sm:w-3/4">
-          <InputGroupInput placeholder="Try searching for pages..." />
-          <InputGroupAddon>
-            <SearchIcon />
-          </InputGroupAddon>
-          <InputGroupAddon align="inline-end">
-            <Kbd>/</Kbd>
-          </InputGroupAddon>
-        </InputGroup>
+        <PageSearch />
         <EmptyDescription>
           Need help? <a href="#">Contact support</a>
         </EmptyDescription>

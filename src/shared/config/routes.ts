@@ -8,6 +8,7 @@ export const ROUTES = {
     path: '/',
     label: 'Home',
   },
+
   login: {
     path: '/login',
     label: 'Login',
