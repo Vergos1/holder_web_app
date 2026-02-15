@@ -1,4 +1,5 @@
 import { cn } from '@shared-lib';
+import { ReactNode } from 'react';
 
 type TypographyListProps = Readonly<{
   list: { id: string | number; text: string }[];
@@ -6,7 +7,7 @@ type TypographyListProps = Readonly<{
 }>;
 
 type TypographyTextProps = Readonly<{
-  children: string;
+  children: ReactNode;
   className?: string;
 }>;
 
