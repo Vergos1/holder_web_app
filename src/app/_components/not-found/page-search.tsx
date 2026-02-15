@@ -6,6 +6,10 @@ import {
   ComboboxItem,
   ComboboxList,
   InputGroupAddon,
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemTitle,
   Kbd,
 } from '@components-ui';
 import { ROUTES } from '@shared-config';
@@ -39,7 +43,16 @@ export const PageSearch = () => {
         <ComboboxList>
           {item => (
             <ComboboxItem key={item.path} value={item}>
-              {item.label}
+              <Item size="xs" className="p-0">
+                <ItemContent>
+                  <ItemTitle className="whitespace-nowrap">
+                    {item.label}
+                  </ItemTitle>
+                  <ItemDescription className="text-xs text-gray-500">
+                    {item.path}
+                  </ItemDescription>
+                </ItemContent>
+              </Item>
             </ComboboxItem>
           )}
         </ComboboxList>

@@ -87,6 +87,18 @@ export {
   InputGroupText,
   InputGroupTextarea,
 } from './input-group';
+export {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemFooter,
+  ItemGroup,
+  ItemHeader,
+  ItemMedia,
+  ItemSeparator,
+  ItemTitle,
+} from './item';
 export { Kbd, KbdGroup } from './kbd';
 export { Label } from './label';
 export {
