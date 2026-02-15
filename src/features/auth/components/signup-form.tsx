@@ -1,20 +1,20 @@
-import { cn } from '@shared-lib';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import {
+  Button,
+  Card,
+  CardContent,
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from '@/components/ui/field';
-import { Input } from '@/components/ui/input';
+  Input,
+} from '@components-ui';
+import { cn } from '@shared-lib';
 
-export function SignupForm({
+export const SignupForm = ({
   className,
   ...props
-}: React.ComponentProps<'div'>) {
+}: React.ComponentProps<'div'>) => {
   return (
     <div className={cn('flex flex-col gap-6', className)} {...props}>
       <Card className="overflow-hidden p-0">
@@ -112,4 +112,4 @@ export function SignupForm({
       </FieldDescription>
     </div>
   );
-}
+};
