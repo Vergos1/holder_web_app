@@ -1,5 +1,6 @@
 import '@styles/globals.css';
 
+import { AppHeader } from '@components-layout';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AppHeader />
         {children}
       </body>
     </html>
