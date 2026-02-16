@@ -114,6 +114,16 @@ export {
   SelectValue,
 } from './select';
 export { Separator } from './separator';
+export {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from './sheet';
 export { Textarea } from './textarea';
 export {
   TypographyBlockquote,
